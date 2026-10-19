@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#541c30">
+  <meta name="description" content="Một thế giới nhỏ, dành riêng cho em. Món quà ngày Phụ nữ Việt Nam 20/10.">
+  <title>A Little World for You — 20.10</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="unopened">
+  <section class="opening" id="opening" aria-labelledby="opening-title">
+    <div class="opening-top"><span>A LITTLE WORLD FOR YOU</span><span>A PERSONAL EDITION · 20.10</span></div>
+    <div class="opening-center"><span class="eyebrow">SOMETHING SMALL. JUST FOR YOU.</span><h1 id="opening-title">I made a little<br><em>something</em> for you.</h1><p>For you, on October 20th.</p><button class="button light" id="open-gift">OPEN YOUR GIFT <span aria-hidden="true">↗</span></button></div>
+    <div class="opening-bottom"><span>WITH LOVE, ALWAYS</span><span>01 / ONE OF A KIND</span></div>
+  </section>
+  <div id="world" inert>
+    <header class="header"><a href="#home" class="brand">a little world<span>FOR YOU</span></a><nav aria-label="Điều hướng chính"><a href="#moments">Kỷ niệm</a><a href="#letter">Lá thư</a><a href="#wishes">Lời chúc</a></nav><span class="header-date">20 / 10</span></header>
+    <main>
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><span class="eyebrow">THE OCTOBER EDITION — JUST FOR YOU</span><h2 id="hero-title" tabindex="-1">To my<br><em>favorite</em><br>person.</h2><p id="hero-message"></p><a class="text-link" href="#moments">MỘT CHÚT CHÚNG MÌNH <span aria-hidden="true">↓</span></a></div>
+        <figure class="hero-photo"><img id="hero-image" src="assets/photos/photo-01.jpg" alt="Hai bạn ôm nhau trước phông nền những ngôi sao" fetchpriority="high"><figcaption><span>OUR OWN LITTLE UNIVERSE</span><span>♡</span></figcaption><span class="hero-date" aria-label="Ngày 20 tháng 10">20<span>.</span>10</span></figure>
+        <div class="hero-foot"><span>A LITTLE WORLD FOR YOU</span><span>NHỮNG ĐIỀU NHỎ BÉ, DÀNH RIÊNG CHO EM.</span><span>SCROLL TO DISCOVER ↓</span></div>
+      </section>
+      <section id="moments" class="moments section">
+        <div class="section-heading reveal"><div><span class="eyebrow">01 / THE LITTLE ARCHIVE</span><h2>Our little<br><em>moments.</em></h2></div><p>Không cần điều gì thật lớn lao.<br>Chỉ là những khung hình muốn giữ lại.</p></div>
+        <div class="gallery" id="gallery"></div>
+        <div class="archive-note"><span>SIX FRAMES. A LITTLE WORLD.</span><span>CHẠM VÀO ẢNH ĐỂ NHÌN GẦN HƠN ↗</span></div>
+      </section>
+      <section id="letter" class="letter-section section">
+        <div class="letter-intro reveal"><span class="eyebrow">02 / WORDS FROM THE HEART</span><h2>A letter<br><em>for you.</em></h2><p>Có những điều, viết ra sẽ dễ nói hơn.</p></div>
+        <div class="letter-side reveal"><button class="envelope" id="read-letter" aria-expanded="false" aria-controls="letter-content"><span class="envelope-top">A LITTLE NOTE, SEALED WITH LOVE</span><span class="seal" aria-hidden="true">a.</span><span class="envelope-bottom">READ MY LETTER <span aria-hidden="true">↗</span></span></button><article class="letter-content" id="letter-content" hidden><span class="eyebrow">20 THÁNG 10 · GỬI RIÊNG EM</span><h3 id="letter-greeting"></h3><div id="letter-body"></div><p class="signature" id="letter-signature"></p><button class="text-link" id="close-letter">GẤP LÁ THƯ LẠI ↑</button></article></div>
+      </section>
+      <section id="wishes" class="wishes section"><div class="section-heading reveal"><div><span class="eyebrow">03 / TODAY & EVERY DAY</span><h2>Little things<br>I wish <em>for you.</em></h2></div><p>Không chỉ hôm nay.<br>Mà cả những ngày bình thường nhất.</p></div><div class="wish-list" id="wish-list"></div></section>
+      <section class="final-section section"><div class="reveal"><span class="eyebrow">04 / A SMALL REMINDER</span><h2>You are<br><em>so very loved.</em></h2><p>Món quà nhỏ này còn một trang cuối.</p><button class="button" id="last-thing">ONE LAST THING... <span aria-hidden="true">↗</span></button></div><div class="final-mark" aria-hidden="true">20<br><i>10</i></div></section>
+    </main>
+    <footer><a class="brand" href="#home">a little world<span>FOR YOU</span></a><p>Made with love, just for you.</p><span>THE OCTOBER EDITION · 20.10</span></footer>
+  </div>
+  <dialog id="lightbox" class="lightbox" aria-label="Album ảnh"><button class="dialog-close" data-close="lightbox" aria-label="Đóng ảnh">×</button><button id="prev-photo" class="photo-nav prev" aria-label="Ảnh trước">←</button><figure><img id="large-photo" alt=""><figcaption id="large-caption"></figcaption></figure><button id="next-photo" class="photo-nav next" aria-label="Ảnh tiếp theo">→</button><span class="lightbox-help">← → CHUYỂN ẢNH · ESC ĐỂ ĐÓNG</span></dialog>
+  <dialog id="surprise" class="surprise" aria-labelledby="surprise-title"><button class="dialog-close" data-close="surprise" aria-label="Đóng lời chúc">×</button><span class="eyebrow">JUST IN CASE YOU FORGET</span><span class="surprise-flower" aria-hidden="true">✳</span><h2 id="surprise-title"></h2><p id="surprise-message"></p><span class="eyebrow">HAPPY VIETNAMESE WOMEN’S DAY · 20.10</span></dialog>
+  <noscript><style>.opening{display:none}body.unopened{overflow:auto}#world{display:none}</style><p>Hãy bật JavaScript để mở món quà và xem album ảnh.</p></noscript>
+</body>
+</html>
